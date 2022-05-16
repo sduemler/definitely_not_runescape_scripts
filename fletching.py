@@ -1,11 +1,12 @@
 import time
+import random
 import threading
 
 import pynput.mouse
 from pynput.mouse import Button
 from pynput.keyboard import Listener, KeyCode, Key
 
-delay = 1.5
+delay = random.random() + 14
 button = Button.left
 start_stop_key = KeyCode(char='s')
 exit_key = KeyCode(char='e')
@@ -36,6 +37,7 @@ class ClickMouse(threading.Thread):
                 mouse.move(40, 0)
                 time.sleep(1)
                 mouse.click(self.button)
+                time.sleep(1)
                 keyboard.press(Key.space)
                 keyboard.release(Key.space)
                 mouse.move(-40, 0)

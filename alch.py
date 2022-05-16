@@ -1,5 +1,6 @@
 import time
 import threading
+import random
 from pynput.mouse import Button, Controller
 from pynput.keyboard import Listener, KeyCode
 
@@ -28,12 +29,10 @@ class ClickMouse(threading.Thread):
         self.program_run = False
 
     def run(self):
-        runs = 0
         while self.program_run:
-            while self.running and runs < 320:
+            while self.running:
                 mouse.click(self.button)
-                time.sleep(self.delay)
-                runs += 1
+                time.sleep(random.random() + self.delay)
             time.sleep(0.1)
 
 
