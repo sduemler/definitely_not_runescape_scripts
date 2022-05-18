@@ -33,10 +33,10 @@ class ClickMouse(threading.Thread):
             while self.running:
                 mouse.click(self.button)
                 mouse.move(-3, -3)
-                time.sleep(random.random() + self.delay)
+                time.sleep(random.random() + self.delay - 0.5)
                 mouse.click(self.button)
                 mouse.move(3, 3)
-                time.sleep(random.random() + self.delay)s
+                time.sleep(random.random() + self.delay)
             time.sleep(0.1)
 
 
