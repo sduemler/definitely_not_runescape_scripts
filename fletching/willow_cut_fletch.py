@@ -16,13 +16,13 @@ clickX, clickY = pyautogui.position()
 
 
 for x in range(100):
-    logs = list(pyautogui.locateAllOnScreen('wood_fletch/runescape_willow_log.png', grayscale=True))
+    logs = list(pyautogui.locateAllOnScreen('fletching/runescape_willow_log.png', grayscale=True))
     if (len(logs) == 21):
         # Locate where the knife is in the inventory
-        knifeX, knifeY = pyautogui.locateCenterOnScreen('wood_fletch/runescape_knife.png', grayscale=True)
+        knifeX, knifeY = pyautogui.locateCenterOnScreen('fletching/runescape_knife.png', grayscale=True)
 
         #Locate where a log is in the inventory
-        logX, logY = pyautogui.locateCenterOnScreen('wood_fletch/runescape_willow_log.png', grayscale=True)
+        logX, logY = pyautogui.locateCenterOnScreen('fletching/runescape_willow_log.png', grayscale=True)
 
         pyautogui.click(knifeX / 2, knifeY / 2)
         time.sleep(random.random() + 1)

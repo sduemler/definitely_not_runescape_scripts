@@ -36,7 +36,7 @@ class Mining(threading.Thread):
         time.sleep(2)
         while self.program_run:
             while self.running:
-                for x in range(13):
+                for x in range(12):
                     pyautogui.moveTo(leftRockX + random.random(), leftRockY + random.random())
                     time.sleep(0.25)
                     pyautogui.click()
