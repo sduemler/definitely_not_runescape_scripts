@@ -25,7 +25,7 @@ time.sleep(1)
 # Locate where the knife is in the inventory
 knifeX, knifeY = pyautogui.locateCenterOnScreen('../fletching/runescape_knife.png', grayscale=True)
 
-for x in range(100):
+for x in range(134):
     pyautogui.click(knifeX / 2, knifeY / 2)
     time.sleep(random.random() + 1)
     pyautogui.click((knifeX / 2) + 40, knifeY / 2)

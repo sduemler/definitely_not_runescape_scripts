@@ -29,6 +29,11 @@ class Mining(threading.Thread):
         leftRockX, leftRockY = pyautogui.position()
         print("Got it!")
         time.sleep(0.5)
+        print("Now getting position of the middle rock...")
+        time.sleep(3)
+        midRockX, midRockY = pyautogui.position()
+        print("Got it!")
+        time.sleep(0.5)
         print("Now getting position of the right rock...")
         time.sleep(3)
         rightRockX, rightRockY = pyautogui.position()
@@ -36,22 +41,26 @@ class Mining(threading.Thread):
         time.sleep(2)
         while self.program_run:
             while self.running:
-                for x in range(12):
+                for x in range(9):
                     pyautogui.moveTo(leftRockX + random.random(), leftRockY + random.random())
                     time.sleep(0.25)
                     pyautogui.click()
-                    time.sleep(random.random() + 4)
+                    time.sleep(random.random() + 1.25)
+                    pyautogui.moveTo(midRockX + random.random(), midRockY + random.random())
+                    time.sleep(0.25)
+                    pyautogui.click()
+                    time.sleep(random.random() + 1.25)
                     pyautogui.moveTo(rightRockX + random.random(), rightRockY + random.random())
                     time.sleep(0.25)
                     pyautogui.click()
-                    time.sleep(random.random() + 4)
+                    time.sleep(random.random() + 1.25)
 
                 ores = list(pyautogui.locateAllOnScreen('../mining/iron_ore.png'))
                 for x in range(len(ores)):
                     oreX, oreY = pyautogui.center(ores[x])
                     pyautogui.keyDown('shift')
                     pyautogui.click((oreX + random.random()) / 2, (oreY + random.random()) / 2)
-                    time.sleep(1)
+                    time.sleep(0.5)
                     pyautogui.keyUp('shift')
             time.sleep(0.1)
 

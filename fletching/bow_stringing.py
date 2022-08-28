@@ -31,11 +31,11 @@ time.sleep(1)
 pyautogui.press('escape')
 time.sleep(1)
 
-for x in range(150):
+for x in range(265):
     # stringing action
     pyautogui.click(positionX, positionY)
     time.sleep(random.random() + 1)
-    pyautogui.moveTo(positionX, positionY + 150)
+    pyautogui.moveTo(positionX, positionY + 145)
     time.sleep(random.random() * 1)
     pyautogui.click()
     time.sleep(random.random() + 2)
