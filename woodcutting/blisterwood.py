@@ -2,6 +2,7 @@ import time
 import random
 import pyautogui
 
+start = time.time()
 
 #Get the logout X
 print("Place your cursor over the logout X.")
@@ -54,5 +55,7 @@ pyautogui.moveTo(logoutX, logoutY)
 time.sleep(0.3)
 pyautogui.click()
 
-print("Logged out.")
+end = time.time()
+elapsed = ((end - start) / 60) / 60
 
+print("You were woodcutting for " + str(elapsed) + " hours.")
