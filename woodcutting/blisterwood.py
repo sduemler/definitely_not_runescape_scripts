@@ -38,9 +38,9 @@ for x in range(140):
 
   logs = list(pyautogui.locateAllOnScreen('woodcutting/blisterwoodlog2.png', grayscale=True))
   for z in range(len(logs)):
-      oreX, oreY = pyautogui.center(logs[z])
+      logX, logY = pyautogui.center(logs[z])
       pyautogui.keyDown('shift')
-      pyautogui.click((oreX + random.random()) / 2, (oreY + random.random()) / 2)
+      pyautogui.click((logX + random.random()) / 2, (logY + random.random()) / 2)
       time.sleep(0.5)
       pyautogui.keyUp('shift')
   time.sleep(0.1)
