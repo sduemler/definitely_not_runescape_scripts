@@ -33,10 +33,7 @@ pyautogui.press('f3')
 
 print("Starting now!")
 
-loops = 25
-
-print(position1X)
-print(position2X)
+loops = 28
 
 for x in range(loops):
   print('Running loop #' + str(x + 1) + ' out of ' + str(loops))
@@ -72,13 +69,12 @@ for x in range(loops):
   #Alching the shields
   #Locate the shields
   shields = list(pyautogui.locateAllOnScreen('woodcutting/redwoodshield.png', grayscale=True, confidence=0.9))
-  print(len(shields))
 
   pyautogui.press('f4')
   time.sleep(0.5)
 
   for y in range(len(shields)):
-    pyautogui.click(alchX / 2, alchY / 2)
+    pyautogui.click(alchX, alchY)
     time.sleep(1.5)
     shieldX, shieldY = pyautogui.center(shields[y])
     pyautogui.click(shieldX / 2, shieldY / 2)
