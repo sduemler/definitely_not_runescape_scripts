@@ -1,5 +1,6 @@
 import time
 import random
+import math
 import pyautogui
 
 start = time.time()
@@ -33,6 +34,7 @@ pyautogui.press('f3')
 
 print("Starting now!")
 
+#28 loops gets you to about 5 hours 45 minutes of play
 loops = 28
 
 for x in range(loops):
@@ -82,9 +84,6 @@ for x in range(loops):
   
   pyautogui.press('f3')
   
-
-
-
 #Logging out
 print("Logging out now.")
 pyautogui.moveTo(xX, yX)
@@ -96,6 +95,6 @@ time.sleep(0.3)
 pyautogui.click()
 
 end = time.time()
-elapsed = ((end - start) / 60) / 60
+elapsed = math.truncate(((end - start) / 60) / 60, 2)
 
 print("You were woodcutting for " + str(elapsed) + " hours.")
