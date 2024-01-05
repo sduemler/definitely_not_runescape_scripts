@@ -1,6 +1,5 @@
 import time
 import random
-import math
 import pyautogui
 
 start = time.time()
@@ -95,6 +94,6 @@ time.sleep(0.3)
 pyautogui.click()
 
 end = time.time()
-elapsed = math.truncate(((end - start) / 60) / 60, 2)
+elapsed = ((end - start) / 60) / 60
 
 print("You were woodcutting for " + str(elapsed) + " hours.")
