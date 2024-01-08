@@ -1,4 +1,5 @@
 import time
+import datetime
 import random
 import pyautogui
 
@@ -84,7 +85,6 @@ for x in range(loops):
   pyautogui.press('f3')
   
 #Logging out
-print("Logging out now.")
 pyautogui.moveTo(xX, yX)
 time.sleep(0.3)
 pyautogui.click()
@@ -97,3 +97,8 @@ end = time.time()
 elapsed = ((end - start) / 60) / 60
 
 print("You were woodcutting for " + str(elapsed) + " hours.")
+
+now = datetime.now()
+
+current_time = now.strftime("%H:%M:%S")
+print("Logging out at: ", current_time)
