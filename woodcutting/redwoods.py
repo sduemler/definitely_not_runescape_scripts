@@ -98,7 +98,6 @@ elapsed = ((end - start) / 60) / 60
 
 print("You were woodcutting for " + str(elapsed) + " hours.")
 
-now = datetime.now()
+now = datetime.datetime.now()
 
-current_time = now.strftime("%H:%M:%S")
-print("Logging out at: ", current_time)
+print("Logging out at: ", now)
