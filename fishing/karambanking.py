@@ -17,7 +17,7 @@ homeTab = pyautogui.locateCenterOnScreen('fishing/homeTab.png', grayscale=True, 
 
 print("Starting now!")
 
-loops = 100
+loops = 200
 
 for x in range(loops):
   fishingSpot = pyautogui.locateCenterOnScreen('fishing/fishingSpot.png', grayscale=True, confidence=0.9)
@@ -26,7 +26,7 @@ for x in range(loops):
   pyautogui.click((fishingSpot[0] + random.random()) / 2, (fishingSpot[1] + random.random()) / 2)
   time.sleep(0.1)
   pyautogui.click()
-  time.sleep(90)
+  time.sleep(100)
 
   pyautogui.click((karamjaGloves[0] + random.random()) / 2, (karamjaGloves[1] + random.random()) / 2)
   time.sleep(6)
@@ -49,6 +49,8 @@ for x in range(loops):
   time.sleep(1)
   
   pyautogui.click((homeTab[0] + random.random()) / 2, (homeTab[1] + random.random()) / 2)
+  time.sleep(0.1)
+  pyautogui.click()
   time.sleep(5)
 
   fairyRing = pyautogui.locateCenterOnScreen('fishing/fairyRing.png', grayscale=True, confidence=0.5)
