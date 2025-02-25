@@ -19,7 +19,7 @@ furnaceX, furnaceY = pyautogui.position()
 
 print("Starting now!")
 
-loops = 230
+loops = 200
 
 for x in range(loops):
   pyautogui.moveTo(furnaceX, furnaceY)
