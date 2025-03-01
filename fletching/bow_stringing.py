@@ -18,7 +18,7 @@ for x in range(3, 0, -1):
 # This will be the position that continually clicks to cut wood
 bankX, bankY = pyautogui.position()
 print("Got position of the bank.")
-print("Make sure that the bow string is one space to the right of the bows in the bank.")
+print("Make sure that the bow string is one space to the left of the unstrung bows in the bank.")
 time.sleep(1)
 print("Now getting location of string in the bank in 5 seconds.")
 time.sleep(5)
@@ -34,22 +34,22 @@ time.sleep(1)
 pyautogui.press('escape')
 time.sleep(1)
 
-for x in range(265):
+for x in range(700):
     # stringing action
     pyautogui.click(positionX, positionY)
     time.sleep(random.random() + 1)
     pyautogui.moveTo(positionX, positionY + 145)
     time.sleep(random.random() * 1)
     pyautogui.click()
-    time.sleep(random.random() + 2)
+    time.sleep(random.random() + 1)
     pyautogui.press('space')
-    time.sleep(20)
+    time.sleep(19)
 
     # banking action
     pyautogui.moveTo(bankX, bankY)
     time.sleep(1)
     pyautogui.click()
-    time.sleep(random.random() + 2)
+    time.sleep(random.random() + 1)
     pyautogui.click(depositX, depositY)
     time.sleep(random.random() + 1)
 
