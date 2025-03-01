@@ -6,7 +6,7 @@ import pyautogui
 print("Make sure to position your mouse on bank you are using.")
 time.sleep(3)
 print("Starting in:")
-for x in range(5, 0, -1):
+for x in range(3, 0, -1):
     print(str(x) + "...")
     time.sleep(1)
 
@@ -23,7 +23,7 @@ pyautogui.press('escape')
 time.sleep(1)
 
 # Locate where the knife is in the inventory
-knifeX, knifeY = pyautogui.locateCenterOnScreen('../fletching/runescape_knife.png', grayscale=True)
+knifeX, knifeY = pyautogui.locateCenterOnScreen('fletching/runescape_knife.png', grayscale=True, confidence=0.8)
 
 for x in range(134):
     pyautogui.click(knifeX / 2, knifeY / 2)
