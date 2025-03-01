@@ -11,7 +11,7 @@ print("Got it.")
 print("Make sure to position your mouse on bank you are using.")
 time.sleep(3)
 print("Starting in:")
-for x in range(5, 0, -1):
+for x in range(3, 0, -1):
     print(str(x) + "...")
     time.sleep(1)
 
@@ -26,6 +26,9 @@ stringX, stringY = pyautogui.position()
 woodX = stringX + 40
 woodY = stringY
 print("Got it!")
+print("For the last thing I need the deposit button")
+time.sleep(3)
+depositX, depositY = pyautogui.position()
 print("Starting now.")
 time.sleep(1)
 pyautogui.press('escape')
@@ -47,15 +50,11 @@ for x in range(265):
     time.sleep(1)
     pyautogui.click()
     time.sleep(random.random() + 2)
-    pyautogui.click(positionX, positionY)
+    pyautogui.click(depositX, depositY)
     time.sleep(random.random() + 1)
 
     # withdrawing action
-    pyautogui.rightClick(stringX, stringY)
-    time.sleep(random.random() + 0.5)
-    pyautogui.move(0, 85)
-    time.sleep(random.random() * 1)
-    pyautogui.click()
+    pyautogui.click(stringX, stringY)
     time.sleep(1)
     pyautogui.click(woodX, woodY)
     time.sleep(random.random() + 1)
