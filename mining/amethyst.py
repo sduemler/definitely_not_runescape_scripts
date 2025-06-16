@@ -37,7 +37,7 @@ time.sleep(3)
 print("Starting now!")
 
 waitTime = 50
-loops = 57
+loops = 80
 chisel = 0
 
 pyautogui.moveTo(position1X + (random.random() * 2), position1Y + (random.random() * 2))
@@ -70,7 +70,7 @@ for x in range(loops):
 
   chisel = chisel + 1
 
-  if chisel % 3 == 0:
+  if chisel % 5 == 0:
     amethystX, amethystY = pyautogui.locateCenterOnScreen('mining/amethyst.png', grayscale=True, confidence=0.9)
     
     pyautogui.click(chiselX / 2, chiselY / 2)
