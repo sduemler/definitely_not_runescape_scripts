@@ -85,13 +85,13 @@ for x in range(loops):
 
 
 #Logging out
-pyautogui.moveTo(xX, yX)
-time.sleep(0.3)
-pyautogui.click()
+# pyautogui.moveTo(xX, yX)
+# time.sleep(0.3)
+# pyautogui.click()
 
-pyautogui.moveTo(logoutX, logoutY)
-time.sleep(0.3)
-pyautogui.click()
+# pyautogui.moveTo(logoutX, logoutY)
+# time.sleep(0.3)
+# pyautogui.click()
 
 
 now = datetime.datetime.now()
