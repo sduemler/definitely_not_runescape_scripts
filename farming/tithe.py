@@ -19,7 +19,6 @@ print("Position your mouse on the first tile")
 time.sleep(3)
 returnX, returnY = pyautogui.position()
 
-time.sleep(3)
 print("Place your mouse over the position of the water barrel.")
 time.sleep(3)
 barrelX, barrelY = pyautogui.position()
