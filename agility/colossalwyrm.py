@@ -38,7 +38,7 @@ for x in range(300):
   pyautogui.moveTo(firstX + random.random(), firstY + random.random())
   time.sleep(0.1)
   pyautogui.click()
-  time.sleep(6)
+  time.sleep(5.5)
 
   pyautogui.moveTo(secondX + random.random(), secondY + random.random())
   time.sleep(0.1)
@@ -53,12 +53,12 @@ for x in range(300):
   pyautogui.moveTo(fourthX + random.random(), fourthY + random.random())
   time.sleep(0.1)
   pyautogui.click()
-  time.sleep(7)
+  time.sleep(6.5)
 
   pyautogui.moveTo(fifthX + random.random(), fifthY + random.random())
   time.sleep(0.1)
   pyautogui.click()
-  time.sleep(22)
+  time.sleep(21)
 
   pyautogui.moveTo(sixthX + random.random(), sixthY + random.random())
   time.sleep(0.1)
